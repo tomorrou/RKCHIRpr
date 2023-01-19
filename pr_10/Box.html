@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+    <link rel="stylesheet" href="BoxStyleSheet.css">
+
+</head>
+
+<body>
+
+    <div class="horizontal_gradient"></div>
+
+    <div class="form">
+
+        <h1>Box Demo</h1>
+
+        <div>
+
+            <button id="box" onclick="read()"><img src="box.png" width="200px"></button>
+
+            <br>
+            <label id="items">Items: 0</label>
+
+            <div>
+                <label for="box_input">How many items <br> would you like to put in?</label>
+                <br>
+                <input type="text" id="box_input">
+            </div>
+
+        </div>
+
+        <div>
+            <button id="put_in_button" onclick="put_in()" disabled>Put in</button>
+        </div>
+
+        <script src="box.js"></script>
+
+        <form action="CheckStrings.html" method="post">
+            <button id="check_strings">Let's check strings!</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

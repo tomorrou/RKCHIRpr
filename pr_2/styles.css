@@ -1,0 +1,63 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    padding-top: 10px;
+    padding-left: 12px;
+    font-size: 20px;
+    color: crimson;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.sidenav a {
+    font-size: 20px;
+    color: crimson;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:active {
+    color: indianred ;
+}
+
+nav a:visited {
+    /*color: darkred;*/
+}
+
+.img{
+    border-width: 3px;
+    border-style: double;
+    border-color: crimson;
+}
+
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+main > p {
+    font-size: 20px;
+}
+
+article h2,main h2 {
+    color: crimson;
+}
+
+main + section {
+    font-size: 16px;
+}
+
+footer {
+    padding-top: 10px;
+    border-top-width: 3px;
+    border-top-style: double;
+}

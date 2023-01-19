@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	background-color: rgb(37, 37, 41);
+}
+
+/* HEADER */
+#top-menu {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+}
+
+/* LOGO */
+#top-menu>a {
+	height: 100%;
+	justify-content: flex-start;
+	z-index: 2;
+}
+
+#logo {
+	height: 100%;
+}
+
+/* DROPDOWN MENU */
+.dropdown>a {
+	margin-right: 0.5em;
+}
+
+.dropdown .menu-arrow {
+	position: relative;
+	height: 100%;
+	width: 0.7em;
+	transition: 0.3s;
+}
+
+.dropdown:hover .menu-arrow {
+	transform: rotate(180deg);
+}
+
+.dropdown .menu-arrow span {
+	position: absolute;
+	top: 50%;
+	height: 1.5px;
+	width: 62%;
+	background-color: white;
+}
+
+.dropdown .menu-arrow span.left_line {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.dropdown .menu-arrow span.right_line {
+	right: 0;
+	transform: rotate(-45deg);
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 16em;
+	left: 0;
+	padding-left: 2em;
+	background-color: inherit;
+	border-top: 1px solid rgba(255, 255, 255, 0.712);
+}
+
+.dropdown-content li {
+	margin: 1em 0;
+}
+
+.dropdown:hover {
+	background-color: rgb(0, 0, 0);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+@media (max-width: 1077px) {
+
+	/* HEADER */
+	#top-menu {
+		background-color: rgb(0, 0, 0);
+	}
+
+	/* BURGER BUTTON */
+	#burger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50%;
+		width: 15%;
+		z-index: 2;
+		transition: 0.5s;
+	}
+
+	#burger span {
+		position: relative;
+		height: 10%;
+		width: 35px;
+		background-color: white;
+		border-radius: 3px;
+	}
+
+	#burger span::after,
+	#burger span::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		background-color: white;
+		border-radius: 3px;
+	}
+
+	#burger span::before {
+		bottom: 10px;
+	}
+
+	#burger span::after {
+		top: 10px;
+	}
+
+	#burger:hover {
+		cursor: pointer;
+	}
+
+	#top-menu ul {
+		display: none;
+	}
+
+	/* MENU ACTIVATION EFFECTS*/
+	#burger.active {
+		transform-origin: center;
+		transform: rotate(180deg);
+	}
+
+	/* BURGER MENU */
+	.dropdown .menu-arrow {
+		display: none;
+	}
+
+	#top-menu ul.active {
+		position: fixed;
+		margin-top: 0;
+		padding-left: 0;
+		top: 50px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(20, 20, 27, 0.952);
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+
+	#top-menu ul#menu-list>li {
+		margin: 2em 2em;
+	}
+
+	#top-menu ul a {
+		width: 100%;
+		font-size: 1.3em;
+	}
+}
+
+@media (min-width: 1078px) {
+
+	/* BURGER BUTTON */
+	#burger {
+		display: none;
+	}
+
+	/* MENU */
+	#top-menu {
+		background-color: rgb(0, 0, 0);
+	}
+
+	#top-menu ul#menu-list {
+		display: flex;
+		width: 80%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		justify-content: flex-end;
+	}
+
+	#top-menu ul#menu-list>li {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 0 2em;
+	}
+
+	/* MENU HOVER EFFECT */
+
+	#top-menu ul#menu-list>li>a:before,
+	#top-menu ul#menu-list>li>a:after {
+		content: "";
+		position: absolute;
+		height: 1px;
+		top: 0;
+		right: 50%;
+		left: 50%;
+		background-color: red;
+		transition: 0.5s;
+	}
+
+	#top-menu ul#menu-list>li>a:hover:before {
+		left: 0;
+	}
+
+	#top-menu ul#menu-list>li>a:hover:after {
+		right: 0;
+	}
+}
+
+#top-menu ul a.current,
+#top-menu ul a:active,
+#top-menu ul a:hover {
+	color: red;
+}
+
+#top-menu ul a {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+#top-menu ul li {
+	list-style: none;
+}
+
+/* FOOTER */
+
+/* VK */
+#vk .link_icon {
+	background: url("vk_icon.png");
+	background-size: cover;
+}
+
+#vk,
+#vk .link_icon {
+	background-color: rgb(60, 60, 163);
+}
+
+/* WHATSAPP */
+#whatsapp .link_icon {
+	background: url("whatsapp_icon.png");
+	background-size: cover;
+}
+
+#whatsapp,
+#whatsapp .link_icon {
+	background-color: rgb(105, 212, 91);
+}
+
+/* TELEGRAM */
+#tg .link_icon {
+	background: url("tg_icon.png");
+	background-size: cover;
+}
+
+#tg,
+#tg .link_icon {
+	background-color: rgb(42, 164, 201);
+}
+
+/* REDDIT */
+#reddit .link_icon {
+	background: url("reddit_icon.png");
+	background-size: cover;
+}
+
+#reddit,
+#reddit .link_icon {
+	background-color: rgb(194, 75, 39);
+}
+
+
+
+@media (max-width: 400px) {
+
+	footer {
+		height: 800px;
+	}
+
+	#share-links {
+		height: 80%;
+	}
+
+	.link {
+		width: 100%;
+	}
+
+	.link .sign {
+		margin-bottom: 3em;
+	}
+}
+
+
+@media (min-width: 401px) {
+
+	footer {
+		height: 400px;
+	}
+
+	#share-links {
+		width: 100%;
+		height: 70%;
+	}
+
+	.link {
+		width: 50%;
+	}
+
+
+	.link .sign {
+		margin-bottom: 3em;
+	}
+}
+
+@media (min-width: 800px) {
+
+	footer {
+		height: 200px;
+	}
+
+	#share-links {
+		height: 60%
+	}
+
+	.link {
+		width: 200px;
+	}
+
+	.link .sign {
+		margin-bottom: 2em;
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10em;
+	background-color: black;
+	color: white;
+}
+
+#share-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#footer-menu {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+}
+
+
+.link {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.link a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+
+.link_icon {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -2em;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+.circles {
+	position: relative;
+	border: 0.5px solid rgba(128, 128, 128, 0.404);
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	transition: 0.3s ease-in;
+}
+
+.circles::after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	width: 80%;
+	height: 80%;
+	border: 0.5px solid rgba(128, 128, 128, 0.404);
+	border-radius: 50%;
+	transition: 0.3s ease-in;
+}
+
+.link:hover .circles {
+	position: relative;
+	border-color: white;
+	width: 100%;
+	height: 100%;
+}
+
+.link:hover .circles::after {
+	border-color: rgba(255, 255, 255, 0.37);
+	width: 100%;
+	height: 100%;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgb(57, 59, 63);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgb(33, 35, 39);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(107, 107, 107);
+}

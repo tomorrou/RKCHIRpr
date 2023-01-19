@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(31, 31, 36);
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+}
+
+.item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.item:hover {
+    background-color: rgb(253, 188, 113);
+    cursor: default;
+}
+
+.item p {
+    padding: 1em 3em;
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.image img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.item:nth-child(7) {
+    grid-column: span 3;
+    grid-row: span 1;
+}

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #81cdff, #557dff);
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+
+section {
+    min-height: 150px;
+    display: block;
+
+}
+
+section h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.links,
+.notif,
+.close-notif,
+.create-list {
+    margin: 0 9em;
+    text-align: center;
+}
+
+.links,
+.create-list,
+.area {
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.links {
+    background-color: rgba(150, 199, 247, 0.432);
+    padding: 1em;
+}
+
+.notif {
+    position: absolute;
+    margin: 0;
+    top: 1em;
+    left: 1em;
+}
+
+.create-list {
+    background-color: rgba(150, 199, 247, 0.432);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+    height: auto;
+}
+
+.area {
+    width: calc(100vw / 3);
+    height: calc(100vh / 3);
+    background-color: rgba(177, 247, 188, 0.692);
+    margin: 30px auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.area img {
+    position: absolute;
+}
+
+.where-click {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.notifs {
+    display: flex;
+    justify-content: center;
+}
+
+.close-notif {
+    position: absolute;
+    margin: 0;
+    top: 1em;
+    right: 6em;
+}
+
+.notif__inner {
+    position: absolute;
+    top: 2em;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.notifs .notif__btn {
+    border: none;
+    background: none;
+    position: relative;
+    display: inline-block;
+}
+
+.notifs .notif__btn i {
+    font-size: 46px;
+}
+
+.center-picture {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.notif__counter {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 0px 6px;
+    background: rgb(82, 210, 157);
+    border-radius: 50%;
+}

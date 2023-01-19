@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+body,
+html {
+	margin: 0;
+}
+
+.horizontal_gradient {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, blue, pink);
+	z-index: -1;
+}
+
+.content {
+	margin: 10em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+
+/* NOTIFICATIONS */
+.notifications {
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: white;
+	transition: height 0.2s, width 0.2s;
+}
+
+.notifications:hover {
+	height: 350px;
+	width: 200px;
+	border-radius: 10px;
+}
+
+.notifications .list {
+	font-family: 'Secular One', sans-serif;
+	display: none;
+}
+
+.notifications:hover .list {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.notifications:hover .list ul {
+	width: 100%;
+	margin: 2em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.notifications:hover .list ul li {
+	position: relative;
+	margin: 1.2em 0;
+	font-size: 1em;
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5em;
+}
+
+.notifications:hover .list ul li:hover {
+	cursor: pointer;
+	background-color: #9c42fd;
+	color: white;
+	transform: scale(1.2, 1.2);
+	border-radius: 5px;
+}
+
+.notifications:hover .list ul li::before {
+	position: absolute;
+	left: 3em;
+	border-radius: 50%;
+	width: 1.2em;
+	height: 1.2em;
+	line-height: 2.5em;
+	color: white;
+	text-align: center;
+}
+
+.notifications:hover .list ul li::after {
+	content: "";
+	background-color: #9c42fd;
+	position: absolute;
+	left: 3em;
+	top: 0.5em;
+	border-radius: 50%;
+	width: 1.2em;
+	height: 1.2em;
+	z-index: -1;
+
+}
+
+.notifications:hover .list ul li:hover:before {
+	color: #9c42fd;
+}
+
+.notifications:hover .list ul li:hover:after {
+	background-color: white;
+}
+
+.notifications:hover .list ul li:first-of-type::before {
+	content: "1";
+}
+
+.notifications:hover .list ul li:nth-of-type(2)::before {
+	content: "2";
+}
+
+.notifications:hover .list ul li:nth-of-type(3)::before {
+	content: "3";
+}
+
+.notifications:hover .list ul li:nth-of-type(4)::before {
+	content: "4";
+}
+
+.notifications .icon {
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.notifications:hover .icon {
+	height: 50px;
+	background-color: #9c42fd;
+	justify-content: flex-start;
+	width: 100%;
+	position: relative;
+
+}
+
+.notifications .icon img {
+	object-fit: cover;
+	width: 30px;
+	height: 30px;
+}
+
+.notifications .icon:after {
+	content: "4";
+	position: absolute;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	color: white;
+	background-color: red;
+	text-align: center;
+	top: 5px;
+	right: -5px;
+	transition: 0.4s;
+}
+
+.notifications:hover .icon:after {
+	transform: translateX(200px);
+}
+
+.notifications:hover .icon img {
+	margin-left: 15px;
+}
+
+/* BUTTONS */
+.buttons_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-family: 'Secular One', sans-serif;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(149, 33, 179);
+}
+
+.buttons_container h1 {
+	font-family: inherit;
+}
+
+.buttons {
+	position: relative;
+	display: flex;
+}
+
+.buttons button {
+	font-family: inherit;
+	font-size: 1em;
+	margin: 1em 1em;
+	width: 180px;
+	height: 50px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 10px rgb(150, 150, 150);
+	transition: 0.3s ease-in;
+	border: none;
+}
+
+.buttons button:hover {
+	cursor: pointer;
+}
+
+/* 1 BUTTON */
+.buttons button:first-of-type {
+	background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+	box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+	color: white;
+	border-radius: 6px;
+	transition: 0.15s;
+
+}
+
+.buttons button:first-of-type:hover {
+	box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+	transform: translateY(-2px);
+
+}
+
+.buttons button:first-of-type:active {
+	box-shadow: #3c4fe0 0 3px 7px inset;
+	transform: translateY(2px);
+}
+
+
+/* 2 BUTTON */
+.buttons button:nth-of-type(2) {
+	padding: 0.6em 2em;
+	color: rgb(0, 0, 0);
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	transition: color 0s;
+}
+
+.buttons button:nth-of-type(2):before {
+	content: "";
+	background: linear-gradient(45deg,
+			#ff0000,
+			#ff7300,
+			#fffb00,
+			#48ff00,
+			#00ffd5,
+			#002bff,
+			#7a00ff,
+			#ff00c8,
+			#ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing-button-85 20s linear infinite;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+	0% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 400% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.buttons button:nth-of-type(2):after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: white;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+.buttons button:nth-of-type(2):hover:after {
+	background: none;
+}
+
+.buttons button:nth-of-type(2):hover {
+	color: white;
+}
+
+/* 3 BUTTON */
+.buttons button:nth-of-type(3) {
+	background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+	background-size: 200% auto;
+}
+
+.buttons button:nth-of-type(3):hover {
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* 4 BUTTON */
+.buttons button:nth-of-type(4) {
+	background-color: #e6ccff;
+	color: #000;
+	cursor: pointer;
+	border: 3px solid;
+	padding: 0.25em 0.5em;
+	box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+	position: relative;
+	transition: 0s;
+}
+
+.buttons button:nth-of-type(4):active {
+	box-shadow: 0px 0px 0px 0px;
+	top: 5px;
+	left: 5px;
+}
+
+/* CARDS */
+.cards_container {
+	margin-top: 5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-family: 'Secular One', sans-serif;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(149, 33, 179);
+}
+
+.cards_container h1 {
+	font-family: inherit;
+}
+
+.cards {
+	position: relative;
+	display: flex;
+}
+
+.cards .card {
+	position: relative;
+	font-family: inherit;
+	font-size: 1em;
+	margin: 1em 1em;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 10px rgb(150, 150, 150);
+	transition: 0.3s ease-in;
+	border: none;
+	transition: translateY 0.5s ease-in-out;
+}
+
+.card_info {
+	opacity: 0;
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 0.8em;
+	padding: 5em 1.5em 0.5em;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.card_info:hover {
+	cursor: default;
+	opacity: 1;
+}
+
+.card img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.card::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	background: transparent;
+	background-image: linear-gradient(to top, #11de93, #0e7ad6);
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover::before {
+	opacity: 0.8;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+}
+
+/* VIDEO */
+.video_container {
+	margin-top: 5em;
+	width: 650px;
+	height: 490px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-family: 'Secular One', sans-serif;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgb(149, 33, 179);
+}
+
+.video_container .video {
+	position: relative;
+	width: 80%;
+	height: 95%;
+}
+
+.video_container .video video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+.video_container .video::before {
+	content: "";
+	position: absolute;
+	width: 85%;
+	height: 80%;
+	left: -400px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: black;
+	opacity: 0;
+	transition: 0.2s ease-in-out;
+}
+
+.video_container .video:hover::before {
+	opacity: 0.8;
+	transform: translateX(360px);
+}
+
+.video_container .video_info {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	width: 85%;
+	height: 80%;
+	left: -400px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 3em 2em;
+	line-height: 2em;
+	color: white;
+	opacity: 0;
+	transition: 0.2s ease-in-out;
+}
+
+.video_container .video:hover .video_info {
+	opacity: 1;
+	transform: translateX(360px);
+}
